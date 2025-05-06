@@ -1,0 +1,27 @@
+.tyler {
+    position: relative;
+    animation: moveRight 3s infinite alternate;
+    height: 500px;
+    width: 500px;
+  }
+
+  @keyframes moveRight {
+    from { left: 0; }
+    to { left: 1000px; }
+  }
+.teacher {
+    position: relative;
+    animation: moveRight 3s infinite alternate;
+    height: 500px;
+    width: 500px;
+  }
+
+  @keyframes moveRight {
+    from { left: 0; }
+    to { left: 1000px; }
+  }
+
+  body {
+    background-color: rgb(255, 174, 236);
+  }
+  
