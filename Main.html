@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anime Watch</title>
+  <link rel="stylesheet" href="cssfol/Main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <div class="logo">Anime Watch</div>
+      <nav class="navbar">
+        <a href="top100.html">Топ 100</a>
+        <a href="series.html">Сериалы</a>
+        <a href="movies.html">Фильмы</a>
+        <a href="ova.html">OVA</a>
+        <a href="announcements.html">Анонсы</a>
+        <a href="schedule.html">Расписание</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <main>
+      <div id="anime-list" class="anime-container"></div>
+    </main>
+
+    <aside class="sidebar">
+      <div class="profile-card">
+        <div class="profile-header">
+          <img src="https://i.pinimg.com/originals/a6/58/32/a65832155622ac173337874f02b218fb.png" alt="Аватар пользователя" class="profile-avatar">
+          <div class="profile-info">
+            <h3>АнимеЛюб</h3>
+            <p>Уровень: Отаку</p>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div class="stat-item">
+            <span>256</span>
+            <p>Просмотрено</p>
+          </div>
+          <div class="stat-item">
+            <span>34</span>
+            <p>В планах</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Мой список <i class="fas fa-bookmark"></i></h3>
+        <ul class="anime-list">
+          <li>
+            <span class="anime-status watching">Смотрю</span>
+            <span class="anime-title">Attack on Titan</span>
+          </li>
+          <li>
+            <span class="anime-status planned">В планах</span>
+            <span class="anime-title">Demon Slayer</span>
+          </li>
+          <li>
+            <span class="anime-status completed">Завершено</span>
+            <span class="anime-title">Death Note</span>
+          </li>
+          <li>
+            <span class="anime-status on-hold">Отложено</span>
+            <span class="anime-title">One Punch Man</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-section">
+        <h3 class="sidebar-title">Рекомендации <i class="fas fa-fire"></i></h3>
+        <div class="recommended-anime">
+          <div class="rec-anime-item">
+            <img src="https://m.media-amazon.com/images/M/MV5BNGM0YTk3MWEtN2JlZC00ZmZmLWIyMDktN2Q0ZGQxNWZkZWVjXkEyXkFqcGdeQXVyMTA2ODkwNzM5._V1_FMjpg_UX200_.jpg" alt="Jujutsu Kaisen">
+            <div class="rec-anime-info">
+              <h4>Jujutsu Kaisen</h4>
+              <p>9.1/10 <i class="fas fa-star"></i></p>
+            </div>
+          </div>
+          <div class="rec-anime-item">
+            <img src="https://m.media-amazon.com/images/M/MV5BODZkYjU3MGYtMGE2MC00YjRhLWIzNzAtYjI4ZDk5ZWQ4ZDNkXkEyXkFqcGdeQXVyMTA2ODkwNzM5._V1_FMjpg_UX200_.jpg" alt="Vinland Saga">
+            <div class="rec-anime-info">
+              <h4>Vinland Saga</h4>
+              <p>8.8/10 <i class="fas fa-star"></i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <script>
+    const animeList = [
+      {
+        title: "Attack on Titan",
+        genres: ["Action", "Dark Fantasy"],
+        poster: "https://m.media-amazon.com/images/M/MV5BMTY5ODk1NzUyMl5BMl5BanBnXkFtZTgwMjUyNzEyMTE@._V1_FMjpg_UX1000_.jpg"
+      },
+      {
+        title: "Death Note",
+        genres: ["Psychological Thriller", "Supernatural"],
+        poster: "https://m.media-amazon.com/images/M/MV5BNjRiNmNjMmMtN2U2Yi00ODgxLTk3OTMtMmI1MTI1NjYyZTEzXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_.jpg"
+      },
+      {
+        title: "Demon Slayer",
+        genres: ["Adventure", "Martial Arts"],
+        poster: "https://m.media-amazon.com/images/M/MV5BZjZjNzI5MDctY2Y4YS00NmM4LTljMmItZTFkOTExNGI3ODRhXkEyXkFqcGdeQXVyNjc3MjQzNTI@._V1_.jpg"
+      },
+      {
+        title: "Fullmetal Alchemist: Brotherhood",
+        genres: ["Adventure", "Steampunk"],
+        poster: "https://m.media-amazon.com/images/M/MV5BZmEzN2YzOTItMDI5MS00MGU4LWI1NWQtOTg5ZThhNGQwYTEzXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_FMjpg_UX1000_.jpg"
+      },
+      {
+        title: "My Hero Academia",
+        genres: ["Superhero", "Coming-of-age"],
+        poster: "https://m.media-amazon.com/images/M/MV5BNmQzYmE2MGEtZjk4YS00YmVjLWEwZWMtODRkMjc4MTM5N2I3XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg"
+      },
+      {
+        title: "One Punch Man",
+        genres: ["Action", "Parody"],
+        poster: "https://m.media-amazon.com/images/M/MV5BMTNmZDE2NDEtNTg3MS00OTE1LThlZGUtOGZkZTg0NTUyNGVmXkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_FMjpg_UX1000_.jpg"
+      }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('anime-list');
+      
+      animeList.forEach(anime => {
+        const card = document.createElement('div');
+        card.className = 'anime-card';
+        card.innerHTML = `
+          <img src="${anime.poster}" alt="${anime.title}" loading="lazy" />
+          <div class="anime-info">
+            <h3>${anime.title}</h3>
+            <p>${anime.genres.join(', ')}</p>
+            <button class="add-to-list"><i class="far fa-bookmark"></i></button>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    });
+  </script>
+</body>
+</html>
