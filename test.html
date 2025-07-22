@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="test.css">
+    </head>
+    <body>
+        
+        <script src="test.js">
+        </script>
+       <div>
+         <h2 class="v0">Cart Quantity</h2>
+        <button class="v1" onclick="console.log(`cartQuantity: ${cartQuantity}`)">Show quantity</button>
+
+
+         <button class="v2" 
+         onclick="
+
+         cartQuantity += 1
+         console.log(`cartQuantity: ${cartQuantity}`)">
+         Add to Cart</button>
+
+
+         <button class="v3"  onclick="
+
+         cartQuantity += 2
+         console.log(`cartQuantity: ${cartQuantity}`)"
+         >+2</button>
+
+
+        <button class="v4"  onclick="
+
+         cartQuantity += +3
+         console.log(`cartQuantity: ${cartQuantity}`)">+3</button>
+
+
+
+         <button class="v5"  onclick="
+
+         cartQuantity = 0
+         console.log(`cartQuantity: ${cartQuantity}`)">Reset Cart</button>
+
+       </div>
+       <div class="g1">
+        <H2 class="titleofgame"> LITTLE GAME</H2>
+        <div class="g1_buttons">
+        <button class="rock">✊</button>
+        <button class="paper">🤚</button>
+        <button class="scissors">✌️</button>
+        </div>
+        
+       </div>
+    </body>
+    </html>
