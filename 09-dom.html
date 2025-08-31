@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>test_site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="09-dom.css">
+</head>
+<body class="main_class">
+
+<div>
+  <h2>Youtube Subscribe Button</h2>
+  <button 
+    onclick="
+      subscribe_button()" 
+    class="js-subscribe-button">
+    SUBSCRIBE
+  </button>
+</div>
+
+
+<div>
+  <p> Rock Paper Scissors</p>
+  <div class="g1_buttons">  
+      <button class="rock" onclick="playGame('rock')">✊</button>
+      <button class="paper" onclick="playGame('paper')">🤚</button>
+      <button class="scissors" onclick="playGame('scissors')">✌️</button>
+      <button class="resetscores" onclick="playGame('resetscores')">RESET SCORES</button>
+    </div>
+
+    
+  <div class="g2">
+  <h3 class="relations1" id="gameResult">Result will appear here</h3>
+  <p id="scoreBoard">Wins: 0 | Losses: 0 | Ties: 0</p>
+</div>
+
+
+<div>
+  <h2> Amazon Shipping Calculator</h2>
+
+  <p>Orders under $40 = +$10 shipping</p>
+   <p>Orders over $40 = FREE shipping</p>
+  <input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeydown(event)">
+  <button onclick="
+  shipcalc()
+  "> Calculate</button>
+  <p class="js-total-cost"></p>
+
+</div>
+
+
+<div>
+  <button onclick ='heads_tails("heads")' class="heads"> heads</button>
+  <button onclick='heads_tails("tails")'class="tails">tails</button>
+
+    <h3 class="rel" id="result_of_two">Result will appear here</h3>
+<input 
+  placeholder="Your name..." 
+  class="js-name-input" 
+  onkeydown="handleCostKeydown2(event)"
+>
+<button onclick="get_name()">Submit</button>
+
+<p class="js-output"></p>
+
+</div>
+</div>
+
+
+
+</body>
+
+<script src="09-dom.js"></script>
+</html>
