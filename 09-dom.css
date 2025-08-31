@@ -1,0 +1,69 @@
+
+.titleofgame {
+    margin-top: 100px;
+    font-size: 40px;
+    padding-left: 50px;
+}
+.g1 {   
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.g1_buttons {
+    margin-left: 75px;
+}
+.rock {
+    border-radius: 40px;
+    font-size: 30px;
+    background-color: rgb(179, 179, 255);
+    margin-right: 20px;
+    cursor: pointer;
+    padding: 15px 15px 15px 15px;
+}
+
+.paper {
+    border-radius: 40px;
+    font-size: 30px;
+    background-color: rgb(255, 137, 137);
+    cursor: pointer;
+    padding: 15px 15px 15px 15px;
+}
+
+.scissors {
+    border-radius: 40px;
+    font-size: 30px;
+    background-color: rgb(103, 254, 138);
+    display: block;
+    margin-left: 45px;  
+    margin-top: 20px;
+    cursor: pointer;  
+    padding: 15px 15px 15px 15px;  
+}
+
+.rock:active {
+    box-shadow: 2px 2px 1px;
+    font-size:29px;
+    background-color: rgb(194, 194, 255);
+}
+
+.paper:active {
+    box-shadow: 2px 2px 1px;
+    font-size:29px;
+    background-color: rgb(255, 155, 155);
+}
+
+.scissors:active {
+    box-shadow: 2px 2px 1px;
+    font-size:29px;
+    background-color: rgb(162, 250, 164);
+}
+
+
+
+.resetscores {
+    border-radius: 40px;
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 7px 7px 7px 7px;
+    background-color: rgb(244, 255, 126);
+    display: block;
+}
