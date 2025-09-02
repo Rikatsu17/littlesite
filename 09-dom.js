@@ -4,8 +4,10 @@ function subscribe_button() {
 
     if (buttonElement.innerText === 'SUBSCRIBE') {
         buttonElement.innerHTML = 'SUBSCRIBED';
+        buttonElement.classList.add('is-subscribed')
       } else {
         buttonElement.innerHTML = 'SUBSCRIBE';
+        buttonElement.classList.remove('is-subscribed')
       }
 }
 
@@ -56,6 +58,7 @@ function playGame(playerMove) {
   const resultElement = document.getElementById('gameResult');
   const scoreElement = document.getElementById('scoreBoard');
 
+  
   resultElement.innerText = `You picked ${playerMove}. Computer picked ${computerMove}. ${result}.`;
   scoreElement.innerText = `Wins: ${score.total_wins} | Losses: ${score.total_loses} | Ties: ${score.total_ties}`;
 }
@@ -110,5 +113,18 @@ function get_name() {
 function handleCostKeydown2(event) {
   if (event.key === 'Enter' || event.key === ' ') {
     get_name();
+  }
+}
+
+let listofDo = []
+function add_todo(){
+  let input_element = document.querySelector('.js-todo-input')
+  const Name = input_element.value
+  listofDo.push(Name)
+  console.log(listofDo)
+}
+function handleCostKeydown3(event) {
+  if (event.key === 'Enter') {
+    add_todo()
   }
 }
